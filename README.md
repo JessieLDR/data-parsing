@@ -56,6 +56,8 @@ The below table shows the first few rows expected for: `PUB_RealtimeMktPrice_201
 
 <skipped a few rows to the end of the file, refer to [Help Documentation](http://reports.ieso.ca/docrefs/helpfile/RealtimeMarketPrice.pdf) to understand why these values are not NULL.>
 
+| Zone  | Type | Delivery Interval | Dollars per MW |
+| ------------- | ------------- | ------------- | ------------- |
 | Manitoba SK  | Energy  | 2019-04-13 10:00:00  | -0.13  |
 | Manitoba SK  | 10N  | 2019-04-13 10:00:00  | 0.45  |
 | Manitoba SK  | 30R  | 2019-04-13 10:00:00  | 0.45  |
