@@ -2,7 +2,9 @@
 
 Voltus participates in dozens of energy markets across the USA and Canada.  Each market operator publishes reports about electricity demand and pricing at various temporal and spatial frequencies.  The data from these reports is critical to Voltus' current operations and our future product development.  
 
-We expect this assignment to take about an hour.  Feel free to leverage open source libraries to speed up the parsing process.
+We expect this assignment to take about an hour.  *Feel free to leverage open source libraries to speed up the parsing process.*
+
+If you have questions, please reach out to engineering@voltus.co.
 
 ## Index
 
@@ -13,7 +15,7 @@ We expect this assignment to take about an hour.  Feel free to leverage open sou
 
 ## The Dataset
 
-In the `data/` directory are 10 xml Realtime Market Price Reports from the [Independent Electricity System Operator (IESO)'s](http://www.ieso.ca/) [public reports](http://reports.ieso.ca/public/)
+In the `data/` directory are 10 xml Realtime Market Price Reports from the [Independent Electricity System Operator (IESO)'s](http://www.ieso.ca/) [Public Reports](http://reports.ieso.ca/public/)
 
 Each file is a report for the real time market price over a one hour period.  This report is generated every 5 minutes, 12 times per hour, with filenames `PUB_RealtimeMktPrice_**_v12.xml`  where `**` indicates the date and hour and `v12` indicates the version.  For this analysis, only version 12 files are provided, thus the pricing at all time periods is final.
 
@@ -33,7 +35,7 @@ Directly from the [Help Documentation](http://reports.ieso.ca/docrefs/helpfile/R
 
 > The intertie zone market values will be blank if they equal the Ontario zone values.
 
-There are blank rows in these reports.  Please use the Ontario zone value for NULLs
+There are blank rows in these reports.  Please use the Ontario zone value for missing data points.
 
 ## The Project
 
@@ -41,7 +43,7 @@ The project is to parse the xml file in `data/` into one large csv.  The expecte
 
 ### Format
 
-The below table shows the first few rows expected for: `PUB_RealtimeMktPrice_2019041309_v12.xml`
+The below table shows the first few rows expected for: `PUB_RealtimeMktPrice_2019041309_v12.xml` should look something like this:
 
 | Zone  | Type | Delivery Interval | Dollars per MW |
 | ------------- | ------------- | ------------- | ------------- |
@@ -65,16 +67,17 @@ The below table shows the first few rows expected for: `PUB_RealtimeMktPrice_201
 ## Extensions
 If there is time available, please consider one or more extensions:
 
-1. Write a unit test to for your parser.
-2. Loop through the files from the [IESO report page](http://reports.ieso.ca/public/RealtimeMktPrice/).  Only parse .xml files with the following filename structure: `PUB_RealtimeMktPrice_*_v12.xml`
+1. Write a unit test for your parser.
+2. Loop through the files from the [IESO report page](http://reports.ieso.ca/public/RealtimeMktPrice/).  Only parse files with the following filename structure: `PUB_RealtimeMktPrice_*_v12.xml`
 3. Write a script that watches the [IESO report page](http://reports.ieso.ca/public/RealtimeMktPrice/) and parses new files as they are uploaded.
-
+4. Discuss how to extend this code to process other reports in [ISEO's Public Reports](http://reports.ieso.ca/public/)
+5. Discuss improvements to the output design.  If the csv were a database table, how could it be structured more efficiently?
 
 ## Deliverables.
 
-Your code should be delivered as a fork of this repo, with source implementing parsing and generating all other deliverables. Assume that the output of your code will be run in a production environment.
+Your code should be delivered compressed file (`*.zip`, `*.tar.gz`, etc) emailed to engineering@voltus.co, with source implementing the parsing and generating deliverables. Assume your code will be run in a production environment.
 
 Your code should:
-1. Output should be a csv in the format described above.  If databases are easier to work with, feel free to setup tables.
+1. Output a csv in the format described above.  If databases are easier for you to work with, feel free to setup tables in a similar format.
 2. Be readable on its own.
 3. Include your preferred language's version of a `requirements.txt` or `package.json` so that someone else can easily duplicate your environment/dependencies.
