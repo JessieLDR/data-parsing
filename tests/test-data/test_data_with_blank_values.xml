@@ -1,0 +1,27 @@
+<MarketDocument xmlns="http://www.ieso.ca/schema">
+    <DeliveryDate>2019-04-13</DeliveryDate>
+    <DeliveryHour>9</DeliveryHour>
+    <IntertieZonalPrices>
+        <IntertieZoneName>Ontario</IntertieZoneName>
+        <Prices>
+            <PriceType>Energy</PriceType>
+            <IntervalPrice>
+                <Interval>1</Interval>
+                <MCP>20.00</MCP>
+            </IntervalPrice>
+            <!-- ...其他间隔时间点的价格 -->
+        </Prices>
+    </IntertieZonalPrices>
+    <IntertieZonalPrices>
+        <IntertieZoneName>Manitoba</IntertieZoneName>
+        <Prices>
+            <PriceType>Energy</PriceType>
+            <IntervalPrice>
+                <Interval>1</Interval>
+                <MCP></MCP> <!-- 空的价格值 -->
+            </IntervalPrice>
+            <!-- ...其他间隔时间点的价格 -->
+        </Prices>
+    </IntertieZonalPrices>
+    <!-- ...其他跨接区域的价格 -->
+</MarketDocument>

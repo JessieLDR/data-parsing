@@ -1,0 +1,7 @@
+<!-- tests/test-data/test_data_invalid_structure.xml -->
+<MarketDocument>
+    <DeliveryDate>2019-04-13
+    <!-- 注意，这里缺少结束标签 -->
+    <IntertieZonalPrices>
+        <!-- 结构不完整或标签不匹配 -->
+</MarketDocument

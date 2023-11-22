@@ -1,0 +1,17 @@
+<!-- tests/test-data/test_data_missing_elements.xml -->
+<MarketDocument xmlns="http://www.ieso.ca/schema">
+    <DeliveryDate>2019-04-13</DeliveryDate>
+    <!-- 注意，DeliveryHour元素缺失 -->
+    <IntertieZonalPrices>
+        <!-- 注意，IntertieZoneName元素缺失 -->
+        <Prices>
+            <PriceType>Energy</PriceType>
+            <IntervalPrice>
+                <Interval>1</Interval>
+                <!-- MCP元素缺失 -->
+            </IntervalPrice>
+            <!-- More intervals... -->
+        </Prices>
+    </IntertieZonalPrices>
+    <!-- Additional IntertieZonalPrices elements... -->
+</MarketDocument>
